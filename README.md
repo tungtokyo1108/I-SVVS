@@ -1,1 +1,1 @@
-# I-SVVS
+# Integrative stochastic variational variable selection (I-SVVS)
