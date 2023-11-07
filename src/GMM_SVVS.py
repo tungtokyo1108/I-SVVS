@@ -102,7 +102,7 @@ def _compute_log_det_cholesky(matrix_chol, covariance_type, n_features):
 # Stochastic Variational Inferenece for GMM 
 #------------------------------------------------------------------------------
 
-class GMM():
+class GMM_SVVS():
     
     def __init__(self, n_components=1, covariance_type='full', tol=1e-3, 
                  reg_covar=1e-6, max_iter=100, n_init=1, init_params='kmeans',
