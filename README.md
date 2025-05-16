@@ -1,7 +1,7 @@
 # I-SVVS : Integrative stochastic variational variable selection
 
 ## Publication
-Dang, Tung, et al. "I-SVVS: Integrative stochastic variational variable selection to explore joint patterns of multi-omics microbiome data" bioRxiv (2024): 2024-10 | [https://doi.org/10.1093/bib/bbaf132](https://doi.org/10.1093/bib/bbaf132) [https://doi.org/10.1101/2023.08.18.553796](https://doi.org/10.1101/2023.08.18.553796)
+Dang, Tung, et al. "I-SVVS: Integrative stochastic variational variable selection to explore joint patterns of multi-omics microbiome data", Briefings in Bioinformatics, 2025, 26(3) | [https://doi.org/10.1093/bib/bbaf132](https://doi.org/10.1093/bib/bbaf132) [https://doi.org/10.1101/2023.08.18.553796](https://doi.org/10.1101/2023.08.18.553796)
 
 
 
