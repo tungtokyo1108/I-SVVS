@@ -124,7 +124,7 @@
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -136,7 +136,8 @@
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(45deg, #2563eb, #1e40af);
         }
 
         /* Section Styles */
@@ -145,7 +146,7 @@
         }
 
         .section-alt {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #0f172a 100%);
             color: white;
         }
 
@@ -173,7 +174,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 4px;
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
             border-radius: 2px;
         }
 
@@ -186,23 +187,25 @@
         }
 
         .feature-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
         }
 
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            color: #feca57;
+            color: #60a5fa;
         }
 
         /* How It Works */
@@ -229,7 +232,7 @@
             transform: translateX(-50%);
             width: 40px;
             height: 40px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #1e40af, #1e3a8a);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -254,7 +257,7 @@
         .stat-number {
             font-size: 3rem;
             font-weight: bold;
-            color: #feca57;
+            color: #60a5fa;
             display: block;
         }
 
@@ -309,7 +312,7 @@
 
         .highlight-item i {
             font-size: 2.5rem;
-            color: #667eea;
+            color: #3b82f6;
             margin-bottom: 1rem;
         }
 
@@ -344,7 +347,7 @@
         }
 
         .publication h3 {
-            color: #667eea;
+            color: #1e40af;
             margin-bottom: 1rem;
         }
 
@@ -518,7 +521,7 @@
             <h2 class="section-title fade-in">Revolutionary Features</h2>
             <div class="features-grid">
                 <div class="feature-card fade-in">
-                    <i class="fas fa-dna feature-icon"></i>
+                    <i class="fas fa-project-diagram feature-icon"></i>
                     <h3>Multi-Omics Integration</h3>
                     <p>Seamlessly integrate microbiome (count data) and metabolome (continuous data) datasets using advanced Bayesian mixture models</p>
                 </div>
@@ -528,7 +531,7 @@
                     <p>Achieve 50x faster computation than existing methods. Complete analysis in hours instead of days</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <i class="fas fa-search feature-icon"></i>
+                    <i class="fas fa-filter feature-icon"></i>
                     <h3>Smart Variable Selection</h3>
                     <p>Automatically identify critical biomarkers and representative species that drive clustering patterns</p>
                 </div>
@@ -579,10 +582,10 @@
             </div>
             
             <div style="text-align: center; margin-top: 3rem;">
-                <div class="fade-in" style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 2rem; border-radius: 15px; color: white;">
+                <div class="fade-in" style="background: linear-gradient(135deg, #1e40af, #1e3a8a); padding: 2rem; border-radius: 15px; color: white;">
                     <h3>🎥 Learn about I-SVVS Research</h3>
                     <p style="margin: 1rem 0; font-size: 1.1rem;">Watch our comprehensive introduction to the methodology and package!</p>
-                    <a href="#video-demo" style="color: #feca57; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
+                    <a href="#video-demo" style="color: #60a5fa; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
                         <i class="fas fa-play-circle"></i> Watch Introduction Video
                     </a>
                 </div>
@@ -705,7 +708,7 @@ python src/GMM_SVVS.py --data data/datasetA_metabolome.csv</pre>
         <div class="container">
             <p>&copy; 2025 I-SVVS Project. Developed by Tung Dang and collaborators.</p>
             <p>University of Tokyo | RIKEN Center for Sustainable Resource Science</p>
-            <p>Contact: <a href="mailto:dangthanhtung91@vn-bml.com" style="color: #feca57;">dangthanhtung91@vn-bml.com</a></p>
+            <p>Contact: <a href="mailto:dangthanhtung91@vn-bml.com" style="color: #60a5fa;">dangthanhtung91@vn-bml.com</a></p>
         </div>
     </footer>
 
