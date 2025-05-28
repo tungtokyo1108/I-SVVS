@@ -75,6 +75,12 @@
             color: white;
             position: relative;
             overflow: hidden;
+            background: 
+                linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
+                url('https://raw.githubusercontent.com/tungtokyo1108/I-SVVS/main/I-SVVS_algorithm.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .hero::before {
@@ -84,7 +90,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="3" fill="url(%23a)"/><circle cx="800" cy="300" r="2" fill="url(%23a)"/><circle cx="400" cy="600" r="4" fill="url(%23a)"/><circle cx="600" cy="800" r="3" fill="url(%23a)"/><circle cx="100" cy="700" r="2" fill="url(%23a)"/></svg>');
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(1px);
             animation: float 20s ease-in-out infinite;
         }
 
