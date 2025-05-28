@@ -263,6 +263,66 @@
             margin-top: 0.5rem;
         }
 
+        /* Video Section */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 50.25%; /* 16:9 aspect ratio */
+            height: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-highlights {
+            margin-top: 3rem;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight-item i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-item h3 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-item p {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
         /* Code Example */
         .code-example {
             background: #2d3748;
@@ -353,6 +413,20 @@
                 padding: 2rem 1.5rem;
                 margin: 0 1rem;
             }
+
+            .video-container {
+                margin: 0 1rem;
+                max-width: calc(100% - 2rem);
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .highlight-item {
+                padding: 1rem;
+            }
         }
 
         /* Scroll-triggered animations */
@@ -375,6 +449,7 @@
             <div class="logo">I-SVVS</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#video-demo">Video Demo</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#performance">Performance</a></li>
@@ -390,7 +465,50 @@
             <h1>I-SVVS</h1>
             <p>Integrative Stochastic Variational Variable Selection<br>
             for Multi-Omics Microbiome Data Analysis</p>
-            <a href="#get-started" class="cta-button">Get Started</a>
+            <div style="margin-bottom: 2rem;">
+                <a href="#video-demo" style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; margin-right: 1rem; transition: all 0.3s; border: 1px solid rgba(255, 255, 255, 0.3);">
+                    <i class="fas fa-play"></i> Watch Demo
+                </a>
+                <a href="#get-started" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section id="video-demo" class="section-white">
+        <div class="container">
+            <h2 class="section-title fade-in">See I-SVVS in Action</h2>
+            <p class="fade-in" style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666;">
+                Watch our comprehensive demonstration of I-SVVS methodology and results
+            </p>
+            <div class="video-container fade-in">
+                <iframe 
+                    src="https://www.youtube.com/embed/sV8utmTHbj4" 
+                    title="I-SVVS Demo Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-highlights fade-in">
+                <div class="highlight-grid">
+                    <div class="highlight-item">
+                        <i class="fas fa-play-circle"></i>
+                        <h3>Live Demonstration</h3>
+                        <p>Step-by-step walkthrough of I-SVVS analysis</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Real Results</h3>
+                        <p>Actual clustering and biomarker identification</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-code"></i>
+                        <h3>Code Examples</h3>
+                        <p>Live coding demonstration with datasets</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -457,6 +575,16 @@
                     <div class="step-number">4</div>
                     <h3>Results & Insights</h3>
                     <p>Get optimized clusters, key biomarkers, and detailed analysis reports with visualizations</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <div class="fade-in" style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 2rem; border-radius: 15px; color: white;">
+                    <h3>🎥 Want to see this in action?</h3>
+                    <p style="margin: 1rem 0; font-size: 1.1rem;">Watch our comprehensive video demonstration above!</p>
+                    <a href="#video-demo" style="color: #feca57; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
+                        <i class="fas fa-play-circle"></i> Watch Video Demo
+                    </a>
                 </div>
             </div>
         </div>
