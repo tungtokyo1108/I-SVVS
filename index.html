@@ -348,6 +348,305 @@
             color: #60a5fa;
         }
 
+        /* Technical Architecture Overview */
+        .architecture-overview {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            border: 1px solid #cbd5e1;
+        }
+
+        .architecture-overview h3 {
+            text-align: center;
+            color: #1e40af;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .arch-diagram {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .data-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .flow-node {
+            background: white;
+            border: 2px solid #3b82f6;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            min-width: 200px;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .flow-node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.25);
+        }
+
+        .flow-node .node-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .flow-node .node-title {
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+
+        .flow-node .node-specs {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.8rem;
+            color: #64748b;
+            background: #f1f5f9;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+
+        .flow-arrow {
+            display: flex;
+            align-items: center;
+            color: #3b82f6;
+        }
+
+        .arrow-line {
+            width: 40px;
+            height: 2px;
+            background: #3b82f6;
+        }
+
+        .arrow-head {
+            width: 0;
+            height: 0;
+            border-left: 8px solid #3b82f6;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+
+        /* Technical Workflow Steps */
+        .technical-workflow {
+            margin-top: 4rem;
+        }
+
+        .technical-step {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            margin: 2rem 0;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .technical-step:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .step-header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .technical-step .step-number {
+            background: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .step-header h3 {
+            flex: 1;
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .complexity-badge {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .step-content {
+            padding: 2rem;
+        }
+
+        .step-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .detail-section h4 {
+            color: #1e40af;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .tech-details {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tech-details li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .tech-details li:last-child {
+            border-bottom: none;
+        }
+
+        .tech-details code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            color: #1e40af;
+            font-weight: 500;
+        }
+
+        .code-snippet {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .code-snippet pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        .math-formula {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #3b82f6;
+            margin-top: 1rem;
+        }
+
+        .formula-title {
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+
+        .formula-content {
+            font-family: 'Monaco', 'Consolas', monospace;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .algorithm-box {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #22c55e;
+            margin-top: 1rem;
+        }
+
+        .algo-title {
+            font-weight: bold;
+            color: #166534;
+            margin-bottom: 0.5rem;
+        }
+
+        .algo-content {
+            font-family: 'Monaco', 'Consolas', monospace;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        .output-specs {
+            background: linear-gradient(135deg, #fefce8, #fef3c7);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #f59e0b;
+            margin-top: 1rem;
+        }
+
+        .spec-title {
+            font-weight: bold;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .spec-list {
+            font-family: 'Monaco', 'Consolas', monospace;
+            color: #451a03;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .architecture-overview {
+                padding: 2rem 1rem;
+            }
+            
+            .data-flow {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .flow-arrow {
+                transform: rotate(90deg);
+            }
+            
+            .flow-node {
+                min-width: auto;
+                width: 100%;
+            }
+            
+            .step-header {
+                padding: 1rem;
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+            
+            .step-content {
+                padding: 1rem;
+            }
+            
+            .step-details {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
         /* How It Works */
         .workflow {
             display: grid;
@@ -404,6 +703,39 @@
         .stat-label {
             font-size: 1.1rem;
             margin-top: 0.5rem;
+        }
+
+        /* How It Works - Basic Workflow (for compatibility) */
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .workflow-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #1e40af, #1e3a8a);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
         }
 
         /* Video Section */
@@ -769,29 +1101,195 @@
     <section id="how-it-works" class="section-white">
         <div class="container">
             <h2 class="section-title fade-in">How I-SVVS Works</h2>
-            <div class="workflow">
-                <div class="workflow-step fade-in">
-                    <div class="step-number">1</div>
-                    <h3>Data Input</h3>
-                    <p>Load your microbiome OTU tables and metabolome datasets. Support for CSV, QIIME2, and standard formats</p>
-                </div>
-                <div class="workflow-step fade-in">
-                    <div class="step-number">2</div>
-                    <h3>Model Selection</h3>
-                    <p>Choose from I-SVVS (integrated), DMM-SVVS (microbiome only), or GMM-SVVS (metabolome only)</p>
-                </div>
-                <div class="workflow-step fade-in">
-                    <div class="step-number">3</div>
-                    <h3>Variational Inference</h3>
-                    <p>Advanced stochastic variational inference optimizes clustering and variable selection simultaneously</p>
-                </div>
-                <div class="workflow-step fade-in">
-                    <div class="step-number">4</div>
-                    <h3>Results & Insights</h3>
-                    <p>Get optimized clusters, key biomarkers, and detailed analysis reports with visualizations</p>
+            
+            <!-- Technical Architecture Overview -->
+            <div class="architecture-overview fade-in">
+                <h3>Algorithmic Architecture</h3>
+                <div class="arch-diagram">
+                    <div class="data-flow">
+                        <div class="flow-node input-node">
+                            <div class="node-icon">📊</div>
+                            <div class="node-title">Multi-Omics Input</div>
+                            <div class="node-specs">
+                                <code>X_micro ∈ ℝ^(N×S)</code><br>
+                                <code>X_metab ∈ ℝ^(N×M)</code>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-arrow">
+                            <div class="arrow-line"></div>
+                            <div class="arrow-head"></div>
+                        </div>
+                        
+                        <div class="flow-node process-node">
+                            <div class="node-icon">⚙️</div>
+                            <div class="node-title">Hierarchical DP</div>
+                            <div class="node-specs">
+                                <code>π ~ GEM(ν)</code><br>
+                                <code>θ_k ~ H</code>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-arrow">
+                            <div class="arrow-line"></div>
+                            <div class="arrow-head"></div>
+                        </div>
+                        
+                        <div class="flow-node output-node">
+                            <div class="node-icon">🎯</div>
+                            <div class="node-title">Optimized Clusters</div>
+                            <div class="node-specs">
+                                <code>Z_i, φ_ij</code><br>
+                                <code>Selected Features</code>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
+
+            <!-- Technical Workflow Steps -->
+            <div class="technical-workflow">
+                <div class="workflow-step technical-step fade-in">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h3>Data Preprocessing & Initialization</h3>
+                        <div class="complexity-badge">O(N·S)</div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-details">
+                            <div class="detail-section">
+                                <h4>Input Validation</h4>
+                                <ul class="tech-details">
+                                    <li><code>validate_input(X_micro, X_metab)</code></li>
+                                    <li>Compositional data normalization</li>
+                                    <li>Missing value imputation strategies</li>
+                                </ul>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Parameter Initialization</h4>
+                                <ul class="tech-details">
+                                    <li><code>K_max = 10</code> (truncation level)</li>
+                                    <li><code>ν = 0.1</code> (DP concentration)</li>
+                                    <li><code>α, β ~ Dir(ζ, η)</code></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="code-snippet">
+                            <pre><code># Initialize variational parameters
+r_ik = softmax(randn(N, K))
+f_ij = sigmoid(randn(N, S))
+λ_star, ι_star = init_globals()</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-step technical-step fade-in">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h3>Stochastic Variational Inference</h3>
+                        <div class="complexity-badge">O(log N)</div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-details">
+                            <div class="detail-section">
+                                <h4>ELBO Optimization</h4>
+                                <ul class="tech-details">
+                                    <li>𝓛[q] = 𝔼[log p(X,Z)] - 𝔼[log q(Z)]</li>
+                                    <li>Natural gradient ascent</li>
+                                    <li>Mini-batch subsampling</li>
+                                </ul>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Variable Updates</h4>
+                                <ul class="tech-details">
+                                    <li>Local: <code>r_ik, f_ij</code></li>
+                                    <li>Global: <code>λ*, ι*, ξ*</code></li>
+                                    <li>Step size: <code>ρ_t = (τ + t)^(-κ)</code></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="math-formula">
+                            <div class="formula-title">Core Update Equations:</div>
+                            <div class="formula-content">
+                                <code>r_ik ∝ exp(𝔼[log π_k] + 𝔼[log p(x_i|θ_k)])</code><br>
+                                <code>f_ij ∝ σ(𝔼[log ε_j] - 𝔼[log(1-ε_j)])</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-step technical-step fade-in">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <h3>Feature Selection & Model Selection</h3>
+                        <div class="complexity-badge">O(S·K)</div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-details">
+                            <div class="detail-section">
+                                <h4>Indicator Variables</h4>
+                                <ul class="tech-details">
+                                    <li><code>φ_ij ~ Bernoulli(ε_j)</code></li>
+                                    <li>Automatic relevance determination</li>
+                                    <li>Sparsity-inducing priors</li>
+                                </ul>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Cluster Estimation</h4>
+                                <ul class="tech-details">
+                                    <li>Stick-breaking weights: <code>π_k</code></li>
+                                    <li>Truncation optimization</li>
+                                    <li>Convergence diagnostics</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="algorithm-box">
+                            <div class="algo-title">Selection Criterion:</div>
+                            <div class="algo-content">
+                                <code>Select top-K features where:</code><br>
+                                <code>𝔼[φ_j] = Σ_i f_ij / N > threshold</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-step technical-step fade-in">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
+                        <h3>Results & Post-processing</h3>
+                        <div class="complexity-badge">O(N·K)</div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-details">
+                            <div class="detail-section">
+                                <h4>Cluster Assignment</h4>
+                                <ul class="tech-details">
+                                    <li><code>z_i = argmax_k r_ik</code></li>
+                                    <li>Uncertainty quantification</li>
+                                    <li>Silhouette analysis</li>
+                                </ul>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Output Generation</h4>
+                                <ul class="tech-details">
+                                    <li>Selected feature rankings</li>
+                                    <li>Cluster visualization (t-SNE/UMAP)</li>
+                                    <li>Performance metrics (ARI, NMI)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="output-specs">
+                            <div class="spec-title">Output Formats:</div>
+                            <div class="spec-list">
+                                <code>clusters.csv</code> - Cluster assignments<br>
+                                <code>features.csv</code> - Selected biomarkers<br>
+                                <code>metrics.json</code> - Performance stats
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div style="text-align: center; margin-top: 3rem;">
                 <div class="fade-in" style="background: linear-gradient(135deg, #1e40af, #1e3a8a); padding: 2rem; border-radius: 15px; color: white;">
                     <h3>🎥 Learn about I-SVVS Research</h3>
