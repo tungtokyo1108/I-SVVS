@@ -122,22 +122,70 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .watch-intro-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .watch-intro-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
         .cta-button {
             display: inline-block;
             background: linear-gradient(45deg, #3b82f6, #1d4ed8);
             color: white;
-            padding: 15px 30px;
+            padding: 12px 24px;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 25px;
             font-weight: bold;
             transition: all 0.3s;
-            animation: fadeInUp 1s ease-out 0.6s both;
+            animation: fadeInUp 1s ease-out 0.8s both;
+            border: none;
+            cursor: pointer;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
             background: linear-gradient(45deg, #2563eb, #1e40af);
+        }
+
+        .cta-button-secondary {
+            display: inline-block;
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease-out 1s both;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+            background: linear-gradient(45deg, #059669, #047857);
         }
 
         /* Section Styles */
@@ -315,6 +363,19 @@
             
             .tech-list li {
                 font-size: 0.9rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .watch-intro-button,
+            .cta-button,
+            .cta-button-secondary {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
             }
         }
 
@@ -1111,11 +1172,16 @@
             <h1>I-SVVS</h1>
             <p>Integrative Stochastic Variational Variable Selection<br>
             for Multi-Omics Microbiome Data Analysis</p>
-            <div style="margin-bottom: 2rem;">
-                <a href="#video-demo" style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; margin-right: 1rem; transition: all 0.3s; border: 1px solid rgba(255, 255, 255, 0.3);">
+            <div class="hero-buttons">
+                <a href="#video-demo" class="watch-intro-button">
                     <i class="fas fa-play"></i> Watch Introduction
                 </a>
-                <a href="#get-started" class="cta-button">Get Started</a>
+                <a href="#how-it-works" class="cta-button">
+                    <i class="fas fa-cogs"></i> How it work
+                </a>
+                <a href="#research" class="cta-button-secondary">
+                    <i class="fas fa-book-open"></i> Research
+                </a>
             </div>
         </div>
     </section>
