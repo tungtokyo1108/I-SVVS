@@ -178,6 +178,146 @@
             border-radius: 2px;
         }
 
+        /* Technical Features Grid */
+        .tech-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tech-feature-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 0;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tech-feature-card:hover {
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.1));
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .tech-feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #60a5fa, #3b82f6, #1e40af);
+        }
+
+        .tech-feature-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .tech-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #60a5fa, #3b82f6);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+        }
+
+        .tech-feature-header h3 {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: rgba(96, 165, 250, 0.15);
+            color: #60a5fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+        }
+
+        .tech-feature-content {
+            padding: 1.5rem 2rem 2rem;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tech-list li {
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .tech-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+            font-size: 0.7rem;
+            top: 0.1rem;
+        }
+
+        .tech-list li strong {
+            color: #60a5fa;
+            font-weight: 600;
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+
+        .tech-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .tech-features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+            
+            .tech-feature-card {
+                margin: 0 0.5rem;
+            }
+            
+            .tech-feature-header {
+                padding: 1.5rem 1.5rem 1rem;
+            }
+            
+            .tech-feature-content {
+                padding: 1rem 1.5rem 1.5rem;
+            }
+            
+            .tech-list li {
+                font-size: 0.9rem;
+            }
+        }
+
         /* Features Grid */
         .features-grid {
             display: grid;
@@ -518,37 +658,108 @@
     <!-- Features Section -->
     <section id="features" class="section-alt">
         <div class="container">
-            <h2 class="section-title fade-in">Revolutionary Features</h2>
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <i class="fas fa-project-diagram feature-icon"></i>
-                    <h3>Multi-Omics Integration</h3>
-                    <p>Seamlessly integrate microbiome (count data) and metabolome (continuous data) datasets using advanced Bayesian mixture models</p>
+            <h2 class="section-title fade-in">Novel Features</h2>
+            <div class="tech-features-grid">
+                <div class="tech-feature-card fade-in">
+                    <div class="tech-feature-header">
+                        <div class="tech-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Multi-Omics Integration</h3>
+                        <div class="tech-badge">Hierarchical Dirichlet Process</div>
+                    </div>
+                    <div class="tech-feature-content">
+                        <ul class="tech-list">
+                            <li><strong>DMM:</strong> Infinite Dirichlet Multinomial Mixture for microbiome data</li>
+                            <li><strong>GMM:</strong> Infinite Gaussian Mixture for metabolome data</li>
+                            <li><strong>HDP:</strong> Shared cluster modeling across data types</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="feature-card fade-in">
-                    <i class="fas fa-rocket feature-icon"></i>
-                    <h3>Ultra-Fast Performance</h3>
-                    <p>Achieve 50x faster computation than existing methods. Complete analysis in hours instead of days</p>
+
+                <div class="tech-feature-card fade-in">
+                    <div class="tech-feature-header">
+                        <div class="tech-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Stochastic Variational Inference</h3>
+                        <div class="tech-badge">Advanced Optimization</div>
+                    </div>
+                    <div class="tech-feature-content">
+                        <ul class="tech-list">
+                            <li><strong>SVI:</strong> Scalable approximate posterior inference</li>
+                            <li><strong>Natural Gradients:</strong> Faster convergence than standard methods</li>
+                            <li><strong>Mini-batch:</strong> Memory-efficient processing</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="feature-card fade-in">
-                    <i class="fas fa-filter feature-icon"></i>
-                    <h3>Smart Variable Selection</h3>
-                    <p>Automatically identify critical biomarkers and representative species that drive clustering patterns</p>
+
+                <div class="tech-feature-card fade-in">
+                    <div class="tech-feature-header">
+                        <div class="tech-icon">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <h3>Intelligent Variable Selection</h3>
+                        <div class="tech-badge">Indicator Variables</div>
+                    </div>
+                    <div class="tech-feature-content">
+                        <ul class="tech-list">
+                            <li><strong>φ Variables:</strong> Bernoulli indicators for feature importance</li>
+                            <li><strong>Sparse Learning:</strong> Automatic noise filtering</li>
+                            <li><strong>Core Set:</strong> Minimal representative feature identification</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="feature-card fade-in">
-                    <i class="fas fa-chart-line feature-icon"></i>
-                    <h3>Scalable Architecture</h3>
-                    <p>Handle massive datasets with 50,000+ microbial species and 1,000+ samples efficiently</p>
+
+                <div class="tech-feature-card fade-in">
+                    <div class="tech-feature-header">
+                        <div class="tech-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h3>Infinite Mixture Models</h3>
+                        <div class="tech-badge">Stick-Breaking Process</div>
+                    </div>
+                    <div class="tech-feature-content">
+                        <ul class="tech-list">
+                            <li><strong>Auto K:</strong> Automatic cluster number estimation</li>
+                            <li><strong>Truncation:</strong> Variational stick-breaking approximation</li>
+                            <li><strong>DP Prior:</strong> Non-parametric cluster allocation</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="feature-card fade-in">
-                    <i class="fas fa-brain feature-icon"></i>
-                    <h3>Bayesian Intelligence</h3>
-                    <p>Leverage infinite Dirichlet multinomial and Gaussian mixture models for superior clustering accuracy</p>
+
+                <div class="tech-feature-card fade-in">
+                    <div class="tech-feature-header">
+                        <div class="tech-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Computational Efficiency</h3>
+                        <div class="tech-badge">Algorithmic Innovation</div>
+                    </div>
+                    <div class="tech-feature-content">
+                        <ul class="tech-list">
+                            <li><strong>O(log n):</strong> Sublinear complexity for large datasets</li>
+                            <li><strong>Taylor Expansion:</strong> Analytical tractability</li>
+                            <li><strong>Vectorization:</strong> Optimized NumPy/SciPy implementation</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="feature-card fade-in">
-                    <i class="fas fa-microscope feature-icon"></i>
-                    <h3>Research-Proven</h3>
-                    <p>Published in top-tier journals with validated results across soybean, human, and mouse datasets</p>
+
+                <div class="tech-feature-card fade-in">
+                    <div class="tech-feature-header">
+                        <div class="tech-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Empirical Validation</h3>
+                        <div class="tech-badge">Rigorous Testing</div>
+                    </div>
+                    <div class="tech-feature-content">
+                        <ul class="tech-list">
+                            <li><strong>ARI Scores:</strong> Superior clustering accuracy metrics</li>
+                            <li><strong>Cross-Domain:</strong> Agricultural, clinical, disease research</li>
+                            <li><strong>Benchmarking:</strong> Outperforms iClusterPlus, Clusternomics</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
