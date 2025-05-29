@@ -360,77 +360,248 @@
         .architecture-overview h3 {
             text-align: center;
             color: #1e40af;
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
-        .arch-diagram {
-            max-width: 900px;
+        .arch-description {
+            text-align: center;
+            color: #475569;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        /* System Architecture Layout */
+        .system-architecture {
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .data-flow {
+        .architecture-layer {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .architecture-layer:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+        }
+
+        .architecture-layer h4 {
+            text-align: center;
+            color: #1e40af;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .layer-components {
             display: flex;
-            align-items: center;
             justify-content: center;
             gap: 2rem;
             flex-wrap: wrap;
         }
 
-        .flow-node {
-            background: white;
-            border: 2px solid #3b82f6;
-            border-radius: 15px;
+        .component {
+            background: #f8fafc;
+            border: 2px solid #cbd5e1;
+            border-radius: 12px;
             padding: 1.5rem;
-            text-align: center;
             min-width: 200px;
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+            text-align: center;
             transition: all 0.3s ease;
+            position: relative;
         }
 
-        .flow-node:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.25);
+        .component:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .flow-node .node-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
+        /* Component Type Specific Styling */
+        .microbiome-comp { border-color: #22c55e; }
+        .metabolome-comp { border-color: #f59e0b; }
+        .dmm-comp { border-color: #3b82f6; }
+        .hdp-comp { border-color: #8b5cf6; }
+        .gmm-comp { border-color: #ef4444; }
+        .svi-comp { border-color: #06b6d4; }
+        .selection-comp { border-color: #f97316; }
+        .clusters-comp { border-color: #84cc16; }
+        .features-comp { border-color: #eab308; }
 
-        .flow-node .node-title {
-            font-weight: bold;
-            color: #1e40af;
-            margin-bottom: 0.5rem;
-        }
-
-        .flow-node .node-specs {
-            font-family: 'Monaco', 'Consolas', monospace;
-            font-size: 0.8rem;
-            color: #64748b;
-            background: #f1f5f9;
-            padding: 0.5rem;
-            border-radius: 5px;
-        }
-
-        .flow-arrow {
+        .comp-header {
             display: flex;
             align-items: center;
-            color: #3b82f6;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        .arrow-line {
-            width: 40px;
-            height: 2px;
-            background: #3b82f6;
+        .comp-icon {
+            font-size: 1.5rem;
         }
 
-        .arrow-head {
+        .comp-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #1e40af;
+        }
+
+        .comp-specs {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+            color: #475569;
+            background: white;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .comp-specs code {
+            color: #1e40af;
+            font-weight: 500;
+        }
+
+        .comp-specs small {
+            color: #64748b;
+            font-size: 0.75rem;
+            display: block;
+            margin-top: 0.3rem;
+        }
+
+        /* Architecture Connectors */
+        .architecture-connector {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .connector-line {
+            width: 3px;
+            height: 40px;
+            background: linear-gradient(180deg, #3b82f6, #1e40af);
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .connector-line::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 0;
             height: 0;
-            border-left: 8px solid #3b82f6;
-            border-top: 5px solid transparent;
-            border-bottom: 5px solid transparent;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 12px solid #1e40af;
+        }
+
+        .connector-label {
+            background: #1e40af;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        /* Innovations Panel */
+        .innovations-panel {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .innovations-panel h4 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .innovations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .innovation-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .innovation-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .innovation-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .innovation-content h5 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .innovation-content p {
+            color: #e2e8f0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .layer-components {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .component {
+                max-width: 400px;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .architecture-overview {
+                padding: 2rem 1rem;
+            }
+            
+            .architecture-layer {
+                padding: 1rem;
+            }
+            
+            .innovations-panel {
+                padding: 2rem 1rem;
+            }
+            
+            .innovations-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comp-specs {
+                font-size: 0.8rem;
+            }
         }
 
         /* Technical Workflow Steps */
@@ -1105,42 +1276,140 @@
             <!-- Technical Architecture Overview -->
             <div class="architecture-overview fade-in">
                 <h3>Algorithmic Architecture</h3>
-                <div class="arch-diagram">
-                    <div class="data-flow">
-                        <div class="flow-node input-node">
-                            <div class="node-icon">📊</div>
-                            <div class="node-title">Multi-Omics Input</div>
-                            <div class="node-specs">
-                                <code>X_micro ∈ ℝ^(N×S)</code><br>
-                                <code>X_metab ∈ ℝ^(N×M)</code>
+                <p class="arch-description">
+                    I-SVVS implements a hierarchical Bayesian framework combining infinite mixture models with stochastic variational inference for scalable multi-omics analysis.
+                </p>
+                
+                <!-- High-Level System Architecture -->
+                <div class="system-architecture">
+                    <div class="architecture-layer input-layer">
+                        <h4>Data Layer</h4>
+                        <div class="layer-components">
+                            <div class="component microbiome-comp">
+                                <div class="comp-header">
+                                    <span class="comp-icon">🧬</span>
+                                    <span class="comp-title">Microbiome</span>
+                                </div>
+                                <div class="comp-specs">
+                                    <code>X<sub>micro</sub> ∈ ℕ<sup>N×S</sup></code><br>
+                                    <small>Count data (OTUs)</small>
+                                </div>
+                            </div>
+                            <div class="component metabolome-comp">
+                                <div class="comp-header">
+                                    <span class="comp-icon">⚗️</span>
+                                    <span class="comp-title">Metabolome</span>
+                                </div>
+                                <div class="comp-specs">
+                                    <code>X<sub>metab</sub> ∈ ℝ<sup>N×M</sup></code><br>
+                                    <small>Continuous data</small>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="flow-arrow">
-                            <div class="arrow-line"></div>
-                            <div class="arrow-head"></div>
-                        </div>
-                        
-                        <div class="flow-node process-node">
-                            <div class="node-icon">⚙️</div>
-                            <div class="node-title">Hierarchical DP</div>
-                            <div class="node-specs">
-                                <code>π ~ GEM(ν)</code><br>
-                                <code>θ_k ~ H</code>
+                    </div>
+
+                    <div class="architecture-connector">
+                        <div class="connector-line"></div>
+                        <div class="connector-label">Hierarchical Integration</div>
+                    </div>
+
+                    <div class="architecture-layer model-layer">
+                        <h4>Model Layer</h4>
+                        <div class="layer-components">
+                            <div class="component dmm-comp">
+                                <div class="comp-header">
+                                    <span class="comp-icon">📊</span>
+                                    <span class="comp-title">Infinite DMM</span>
+                                </div>
+                                <div class="comp-specs">
+                                    <code>π ~ GEM(ν)</code><br>
+                                    <code>α<sub>k</sub> ~ Dir(ζ)</code><br>
+                                    <small>Dirichlet-Multinomial</small>
+                                </div>
+                            </div>
+                            <div class="component hdp-comp">
+                                <div class="comp-header">
+                                    <span class="comp-icon">🌐</span>
+                                    <span class="comp-title">HDP Bridge</span>
+                                </div>
+                                <div class="comp-specs">
+                                    <code>G<sub>0</sub> ~ DP(γ, H)</code><br>
+                                    <code>G<sub>j</sub> ~ DP(α, G<sub>0</sub>)</code><br>
+                                    <small>Shared Clusters</small>
+                                </div>
+                            </div>
+                            <div class="component gmm-comp">
+                                <div class="comp-header">
+                                    <span class="comp-icon">📈</span>
+                                    <span class="comp-title">Infinite GMM</span>
+                                </div>
+                                <div class="comp-specs">
+                                    <code>μ<sub>k</sub>, Σ<sub>k</sub> ~ NIW</code><br>
+                                    <code>β ~ Dir(η)</code><br>
+                                    <small>Gaussian Mixture</small>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="flow-arrow">
-                            <div class="arrow-line"></div>
-                            <div class="arrow-head"></div>
+                    </div>
+
+                    <div class="architecture-connector">
+                        <div class="connector-line"></div>
+                        <div class="connector-label">Variational Optimization</div>
+                    </div>
+
+                    <div class="architecture-layer inference-layer">
+                        <h4>Inference Layer</h4>
+                        <div class="layer-components">
+                            <div class="component svi-comp">
+                                <div class="comp-header">
+                                    <span class="comp-icon">⚡</span>
+                                    <span class="comp-title">Stochastic VI</span>
+                                </div>
+                                <div class="comp-specs">
+                                    <code>𝓛[q] = 𝔼[log p] - 𝔼[log q]</code><br>
+                                    <small>ELBO Maximization</small>
+                                </div>
+                            </div>
+                            <div class="component selection-comp">
+                                <div class="comp-header">
+                                    <span class="comp-icon">🎯</span>
+                                    <span class="comp-title">Variable Selection</span>
+                                </div>
+                                <div class="comp-specs">
+                                    <code>φ<sub>ij</sub> ~ Bernoulli(ε<sub>j</sub>)</code><br>
+                                    <small>Feature Indicators</small>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="flow-node output-node">
-                            <div class="node-icon">🎯</div>
-                            <div class="node-title">Optimized Clusters</div>
-                            <div class="node-specs">
-                                <code>Z_i, φ_ij</code><br>
-                                <code>Selected Features</code>
+                    </div>
+
+                    <div class="architecture-connector">
+                        <div class="connector-line"></div>
+                        <div class="connector-label">Cluster Assignment</div>
+                    </div>
+
+                    <div class="architecture-layer output-layer">
+                        <h4>Output Layer</h4>
+                        <div class="layer-components">
+                            <div class="component clusters-comp">
+                                <div class="comp-header">
+                                    <span class="comp-icon">🎯</span>
+                                    <span class="comp-title">Clusters</span>
+                                </div>
+                                <div class="comp-specs">
+                                    <code>Z<sub>i</sub> = argmax<sub>k</sub> r<sub>ik</sub></code><br>
+                                    <small>Assignments</small>
+                                </div>
+                            </div>
+                            <div class="component features-comp">
+                                <div class="comp-header">
+                                    <span class="comp-icon">⭐</span>
+                                    <span class="comp-title">Selected Features</span>
+                                </div>
+                                <div class="comp-specs">
+                                    <code>S* = {j: 𝔼[φ<sub>j</sub>] > τ}</code><br>
+                                    <small>Biomarkers</small>
+                                </div>
                             </div>
                         </div>
                     </div>
